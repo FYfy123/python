@@ -3,7 +3,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 html = request.get('http://www.17k.com/chapter/2933095/36699279.html')
-open('q.text'.'w')as f:
+with open('q.text'.'w')as f:
    f.write(html.text)
 data = urllib.parse.urlencode({'wd':'q'})
 print(data)
